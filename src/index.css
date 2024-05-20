@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: "../breaking-news.gif";
+}
+.row{
+    display: flex;
+    align-items: center;
+    color: red;
+    height: 150%;
+    width: 100%;
+}
+.card{
+  height: 600px;  
+  background-color: blanchedalmond;
+  margin: 10px 0 10px 0;
+}
+card-img-top{
+    height: 20px;
+    width: 20px;
+}
