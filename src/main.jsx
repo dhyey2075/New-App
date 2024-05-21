@@ -12,7 +12,7 @@ import './index.css'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <App category="general"/>,
   },
   {
     path: "/business",
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/general",
-    element: <App category="genera"/>
+    element: <App category="general"/>
   },
   {
     path: "/health",

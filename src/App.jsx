@@ -40,12 +40,20 @@ function App(props) {
   const handlePrev = () => {
     setPage(prevPage => prevPage - 1);
   }
-
+  let center = {
+    'display': 'block',
+    'margin-left': 'auto',
+    'margin-right': 'auto',
+    'width': '20%',
+    height: '300x'
+  }
   return (
     <>
       <div className="container">
         <Navbar></Navbar>
-        {isLoading && <h1>Loading...</h1>}
+        <h1>{category.toLocaleUpperCase()}</h1>
+        
+        {isLoading && <img className="text-center" src="../loader.gif" alt="" style={center} />}
         <div className="row my-2">
           {!isLoading && newsList.map((item, index) => (
             <div className="new-container col-md-4" key={index}>
@@ -54,6 +62,9 @@ function App(props) {
                 header={item.description}
                 imageURL={item.urlToImage}
                 url={item.url}
+                author={item.author}
+                source = {item.source.name}
+                time = {item.publishedAt}
               />
             </div>
           ))}

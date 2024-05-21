@@ -2,7 +2,7 @@ import React from "react";
 
 const NewsItem = (props) => {
   return (
-    <div className="card">
+    <div className="card" style = {{'overflow':'hidden'}}>
       <img
         src={props.imageURL}
         className="p-3 card-img-top "
@@ -14,7 +14,8 @@ const NewsItem = (props) => {
         <strong>
           <h6 className="card-text my-4">{props.header}</h6>
         </strong>
-        <a href={props.url} target="black" className="btn btn-primary my-1 bg-dark">
+        <small class="text-muted">By {props.author} at {(props.time)}</small><br />
+        <a href={props.url} target="black" className="btn btn-primary bg-dark">
           Read More
         </a>
       </div>
