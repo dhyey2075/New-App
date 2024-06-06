@@ -21,7 +21,7 @@ function App(props) {
     async function fetchData() {
       setIsLoading(true);
       // Replace the commented-out fetch call with your API call if needed
-      const response = await fetch(`https://newsapi.org/v2/top-headlines?country=in&pageSize=6&page=${page}&category=${category}&apiKey=1e778d7882ff40c0af09a9a08f21d699`);
+      const response = await fetch(`https://swh6fcwp-3001.inc1.devtunnels.ms/?page=${page}&category=${category}`,{method:"GET"});
       const data = await response.json();
 
       // Mock data
