@@ -21,7 +21,7 @@ function App(props) {
     async function fetchData() {
       setIsLoading(true);
       // Replace the commented-out fetch call with your API call if needed
-      const response = await fetch(`https://news-app-backend-6ksm.onrender.com/?page=${page}&category=${category}`,{method:"GET"});
+      const response = await fetch(`https://news-app-backend-ire8.onrender.com/?page=${page}&category=${category}`,{method:"GET"});
       const data = await response.json();
 
       // Mock data
